@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Certificate System
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>
+            Blockchain Certificate System
+        </h1>
+
+        <button onclick="connectWallet()">
+            Connect MetaMask
+        </button>
+
+        <p id="wallet"></p>
+    </div>
+
+    <div class="card">
+
+        <h2>
+            Issue Certificate
+        </h2>
+
+        <input
+            type="text"
+            id="studentWallet"
+            placeholder="Student Wallet"
+        >
+
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Student Name"
+        >
+
+        <input
+            type="text"
+            id="course"
+            placeholder="Course Name"
+        >
+
+        <input
+            type="text"
+            id="issuer"
+            placeholder="Issuer"
+        >
+
+        <input
+            type="date"
+            id="issueDate"
+        >
+
+        <button onclick="issueCertificate()">
+            Issue Certificate
+        </button>
+    </div>
+
+    <div class="card">
+
+        <h2>
+            Verify Certificate
+        </h2>
+
+        <input
+            type="number"
+            id="certificateId"
+            placeholder="Certificate ID"
+        >
+
+        <button onclick="verifyCertificate()">
+            Verify
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <h2>
+        Student Certificates
+    </h2>
+
+    <input
+        type="text"
+        id="walletSearch"
+        placeholder="Enter Student Wallet"
+    >
+
+    <button onclick="loadStudentCertificates()">
+        Load Certificates
+    </button>
+
+    <div id="studentCertificates"></div>
+
+</div>
+
+<div class="card">
+
+    <h2>
+        Revoke Certificate
+    </h2>
+
+    <input
+        type="number"
+        id="revokeId"
+        placeholder="Certificate ID"
+    >
+
+    <button onclick="revokeCertificate()">
+        Revoke Certificate
+    </button>
+
+</div>
+<script src="app.js"></script>
+
+</body>
+</html>
